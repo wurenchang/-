@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CC购物主页</title>
+		<link href="css/mall.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript">
+		   var img=1;
+		  function MouseWheel(e){
+		    e=e||window.event;
+		     for(i=1;i<6;i++){
+		       if(i==img){
+		          if(e.wheelDelta){//IE
+		             document.getElementById("img"+i).style.display="block";
+		            }else if(e.detail){//Firefox
+		              document.getElementById("img"+i).style.display="block";
+		           }
+		        }else{
+		           document.getElementById("img"+i).style.display="none";
+		        }
+		      }
+		if(img==5){
+		        img=1;
+		      }else{
+		       img++;
+		      }
+		     }
+		  /*Firefox注册事件*/
+		  if(document.addEventListener){
+		      document.addEventListener("DOMMouseScroll",MouseWheel,false);
+		    }
+		window.onmousewheel=document.onmousewheel=MouseWheel;//IE/Opera/Chrome
+		</script>
+		
+	</head>
+	<body OnLoad="swapPic()">
+		<!--顶部导航条-->
+		<div class="nav">
+				<ul>
+					<li class="nav-pull-down"><img src="img/shopping.jpg" style="width: 100px;height: 100px;"></li>
+					<li class="nav-pull-down"><img src="img/icon_location.png">宜春</li>
+					<li class="login-signup">&nbsp;&nbsp;&nbsp;你好，请<a href="login.html">登录</a><span class="text-color-red"><a href="signuo.html">&nbsp;&nbsp;&nbsp;会员注册</a></span></li>
+					<li><a href="#">我的商城</a></li>
+					<li><a href="#">手机商城</a></li>
+					<li><a href="#">网站导航</a></li>
+					<li><a href="#">客户服务</a></li>
+					<li><a href="#">企业采购</a></li>
+					<li><a href="#">商城会员</a></li>
+				</ul>
+		</div>
+		<!--搜索框-->
+		<div class="find">
+			<label for="findtext">
+			<input type="text" style="width: 600px;height: 30px;font-size: 15px;" placeholder="   输入你想要的商品" required="required" id="findtext"/>
+		</div>
+		<div class="find2">
+			<button style="width: 52px;height:35px;" onclick="tz()"><img src="img/find.jpg" class="findpicture"/></button>
+			<script>
+				function tz(){
+					window.location.href="shopping.html";
+				}
+			</script>
+		</div>
+		<div class="find3">
+			<p>买2免1     领500神券     199减100     服装     ups电源     虎牌     母婴5折抢     取暖器     手机</p>
+		</div>
+		<!--图片循环放映-->
+<div class="find4">
+<img src="img/toppic3.jpg"  id="img1">
+<img src="img/toppic1.jpg" id="img2" style="display:none;">
+<img src="img/toppic2.jpg"  id="img3" style="display:none;">
+<img src="img/toppic4.jpg"  id="img4" style="display:none;">
+<img src="//img.alicdn.com/tps/i4/TB1ZModKMTqK1RjSZPhSutfOFXa.jpg"  id="img5" style="display:none;">
+</div>
+<!-- 侧边导航 -->
+			<div class="nav-side">
+				<ul>
+				    <li><span class="nav-side-item">家用电器</span></li>
+				    <li><span class="nav-side-item">手机</span> / <span class="nav-side-item">运营商</span> / <span class="nav-side-item">数码</span></li>
+				    <li><span class="nav-side-item">电脑</span> / <span class="nav-side-item">办公</span></li>
+				    <li><span class="nav-side-item">家居</span> / <span class="nav-side-item">家具</span> / <span class="nav-side-item">家装</span> / <span class="nav-side-item">厨具</span></li>
+				    <li><span class="nav-side-item">男装</span> / <span class="nav-side-item">女装</span> / <span class="nav-side-item">童装</span> / <span class="nav-side-item">内衣</span></li>
+				    <li><span class="nav-side-item">美妆个护</span> / <span class="nav-side-item">宠物</span></li>
+				    <li><span class="nav-side-item">女鞋</span> / <span class="nav-side-item">箱包</span> / <span class="nav-side-item">钟表</span> / <span class="nav-side-item">珠宝</span></li>
+				    <li><span class="nav-side-item">男鞋</span> / <span class="nav-side-item">运动</span> / <span class="nav-side-item">户外</span></li>
+				    <li><span class="nav-side-item">汽车</span> / <span class="nav-side-item">汽车用品</span></li>
+				    <li><span class="nav-side-item">母婴</span> / <span class="nav-side-item">玩具乐器</span></li>
+				    <li><span class="nav-side-item">食品</span> / <span class="nav-side-item">酒类</span> / <span class="nav-side-item">生鲜</span> / <span class="nav-side-item">特产</span></li>
+				    <li><span class="nav-side-item">礼品鲜花</span> / <span class="nav-side-item">农资绿植</span></li>
+				    <li><span class="nav-side-item">医药保健</span> / <span class="nav-side-item">计生情趣</span></li>
+				    <li><span class="nav-side-item">图书</span> / <span class="nav-side-item">音像</span> / <span class="nav-side-item">电子书</span></li>
+				</ul>
+			</div>
+			<!-- 电脑专场 -->
+					<div class="item-class">
+						<div class="item-class-head">
+							<span class="item-class-title">电脑数码</span>
+							<ul>
+								<li><a href="#">电脑馆</a></li>
+								<li><a href="#">游戏极品</a></li>
+								<li><a href="#">装机大师</a></li>
+								<li><a href="#">职场焕新</a></li>
+								<li><a href="#">女神频道</a></li>
+								<li><a href="#">虚拟现实</a></li>
+								<li><a href="#">二合一平板</a></li>
+								<li><a href="#">电子教育</a></li>
+								<li><a href="#">万物周刊</a></li>
+							</ul>
+						</div>
+						<div class="item-class-content">
+								<div class="s">
+									<ul>
+									    <li>
+											<a href="#">
+												<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/782731205/O1CN01lsJLRm1KlvlNpNdZV_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+									        </a>
+									         <p>现货当天发64G版1299起红米送电源<br>
+											    Xiaomi/小米 Redmi Note 7小金刚<br>
+												红米note7pro9新款手机官方旗舰店<br>
+												8骁龙660</p>
+									     </li>
+										 <li>
+										 	<a href="#">
+										 		<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/57519925/O1CN01HqfztD2NBhSFHJheT_!!0-saturn_solar.jpg_580x580Q90.jpg_.webp"  class="ph"/>
+										     </a>
+										 	<p>20000毫安迷你大容量充电宝自带线<br>
+										 	   超薄便携小巧适用于苹果小米华为手<br>
+										 	   机快充闪充无线专用移动电源女定制<br>
+										 	   logo</p>
+										 </li>
+										 <li>
+										 	<a href="#">
+										 		<img src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/1669409267/O1CN01hZhCAv2IKKqPAaydF_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+										     </a>
+										      <p>[12期分期][两年保修]Apple/苹果<br>
+											     iPad 2018款 9.7英寸wifi新款平<br>
+												 板电脑32G/128G 正品国行新品官方<br>
+												 授权旗舰</p>
+										  </li>
+									
+										 <li>
+										 	<a href="#">
+										 		<img src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/263726286/O1CN01MUqKhF1wJ2AiWiv8Z_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+										     </a>
+										      <p>Sony/索尼 DSC-RX100M6手柄套装<br>
+										 	  黑卡6代RX100VI 黑卡数码相机</p>
+										  </li>
+										  <li>
+										  	<a href="#">
+										  		<img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1669409267/O1CN01oVqhvp2IKKqTZZXDG_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+										      </a>
+										       <p>[12期分期]Apple/苹果 iPad min<br>
+											      i 4平板电脑 7.9英寸金属轻薄智能<br>
+												  电脑128G Wifi版高清迷你便携式苹<br>
+												  果平板</p>
+										   </li>
+ 
+									</div>
+					</div>
+					<!-- 爱吃专场 -->
+					<div class="item-class2">
+						<div class="item-class-head item-class-eat-head">
+							<span class="item-class-title">爱吃</span>
+							<ul>
+								<li><a href="#">休闲零食</a></li>
+								<li><a href="#">坚果</a></li>
+								<li><a href="#">牛奶</a></li>
+								<li><a href="#">饮料冲调</a></li>
+								<li><a href="#">食用油</a></li>
+								<li><a href="#">大米</a></li>
+								<li><a href="#">白酒</a></li>
+								<li><a href="#">红酒</a></li>
+								<li><a href="#">烧烤食材</a></li>
+								<li><a href="#">牛排</a></li>
+								<li><a href="#">樱桃</a></li>
+								
+							</ul>
+						</div>
+						<div class="item-class-content">
+							<div class="s">
+											<ul>
+											    <li>
+													<a href="#">
+														<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i1/51860291/O1CN01kK1qFc1E1Jl9iSUmz_!!0-saturn_solar.jpg_580x580Q90.jpg_.webp" class="ph"/>
+											        </a>
+											         <p>大漠盛宴 黑加仑葡萄干500g2018<br>
+													    新疆特产特级吐鲁番黑葡萄干免洗</p>
+											     </li>
+												 <li>
+												 	<a href="#">
+												 		<img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/392147177/O1CN01JVV9RX22t74HCSseP_!!0-item_pic.jpg_580x580Q90.jpg_.webp"  class="ph"/>
+												     </a>
+												 	<p>【周黑鸭】锁鲜卤鸭脖200g鸭锁骨<br>
+													    240g鸭翅250g 武汉特产零食小吃</p>
+												 </li>
+												 <li>
+												 	<a href="#">
+												 		<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/i2/880734502/O1CN01HA1zK81j7xakqjS9c_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+												     </a>
+												      <p>【三只松鼠_猪肉脯210g】休闲食<br>
+													      品网红零食肉脯特产美食靖江风味</p>
+												  </li>
+											
+												 <li>
+												 	<a href="#">
+												 		<img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/880734502/O1CN01DpLPBp1j7xalzsCag_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+												     </a>
+												      <p>【三只松鼠_每日坚果750g/30天装<br>
+													      混合果仁零食大礼包组合送礼</p>
+												  </li>
+												  <li>
+												  	<a href="#">
+												  		<img src="https://g-search1.alicdn.com/img/bao/uploaded/i4/i3/880734502/O1CN01f1aTE31j7xaikGHJH_!!0-item_pic.jpg_580x580Q90.jpg_.webp" class="ph"/>
+												      </a>
+												       <p>【三只松鼠_巨型零食大礼包3195g/30包<br>
+													       网红小吃送女友创意礼物</p>
+												   </li>
+							 
+											</div>
+							</div>
+							
+			</div>
+			<!-- 底部 -->
+			<footer class="footer">
+				<div class="clearfix"></div>
+				<div class="icon-row">
+					<div class="footer-icon">
+						<h5 class="footer-icon-child"></h5>
+						<span class="footer-icon-text">品类齐全，轻松购物</span>
+					</div>
+					<div class="footer-icon">
+						<h5 class="footer-icon-child footer-icon-child-2"></h5>
+						<span class="footer-icon-text">多仓直发，极速配送</span>
+					</div>
+					<div class="footer-icon">
+						<h5 class="footer-icon-child footer-icon-child-3"></h5>
+						<span class="footer-icon-text">正品行货，精致服务</span>
+					</div>
+					<div class="footer-icon">
+						<h5 class="footer-icon-child footer-icon-child-4"></h5>
+						<span class="footer-icon-text">天天低价，畅选无忧</span>
+					</div>
+				</div>
+				<div class="service-intro">
+					<div class="servece-type">
+						<div class="servece-type-info">
+							<ul>
+								<li>购物指南</li>
+								<li>购物流程</li>
+								<li>会员介绍</li>
+								<li>生活旅行</li>
+								<li>常见问题</li>
+								<li>联系客服</li>
+							</ul>
+						</div>
+						<div class="servece-type-info">
+							<ul>
+								<li>配送方式</li>
+								<li>上门自提</li>
+								<li>211限时达</li>
+								<li>配送服务查询</li>
+								<li>配送费收取标准</li>
+								<li>海外配送</li>
+							</ul>
+						</div>
+						<div class="servece-type-info">
+							<ul>
+								<li>支付方式</li>
+								<li>货到付款</li>
+								<li>在线支付</li>
+								<li>分期付款</li>
+								<li>邮局汇款</li>
+								<li>公司转账</li>
+							</ul>
+						</div>
+						<div class="servece-type-info">
+							<ul>
+								<li>售后服务</li>
+								<li>售后政策</li>
+								<li>价格保护</li>
+								<li>退款说明</li>
+								<li>返修/退换货</li>
+								<li>取消订单</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="friend-link">
+						<div class="friend-link-item">
+							<ul>
+								<li><span class="link-item">关于我们</span></li>
+								<li><span class="link-item">联系我们</span></li>
+								<li><span class="link-item">合作招商</span></li>
+								<li><span class="link-item">商家帮助</span></li>
+								<li><span class="link-item">营销中心</span></li>
+								<li><span class="link-item">销售联盟</span></li>
+								<li><span class="link-item">校园社区</span></li>
+								<li><span class="link-item">风险监测</span></li>
+								<li><span class="link-item link-last-item">隐私政策</span></li>
+							</ul>
+						</div>
+					</div>
+			</footer>
+			</div>
+</body>
+</html>
